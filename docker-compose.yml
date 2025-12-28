@@ -1,0 +1,14 @@
+services:
+  lakehouse_athena:
+    image: trinodb/trino:latest
+    container_name: lakehouse_athena
+    ports:
+      - "8686:8080"
+    volumes:
+      - ./trino/catalog:/etc/trino/catalog
+    networks:
+      - aws_molpay
+
+networks:
+  aws_molpay:
+    external: true
