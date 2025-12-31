@@ -1,7 +1,7 @@
 services:
-  lakehouse_athena:
+  lakehouse-athena:
     image: trinodb/trino:latest
-    container_name: lakehouse_athena
+    container_name: lakehouse-athena
     ports:
       - "8686:8080"
     volumes:
